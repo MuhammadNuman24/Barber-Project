@@ -3,6 +3,8 @@ import { Component, OnInit ,ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { NewContactDialogComponent } from '../new-contact-dialog/new-contact-dialog.component';
 
 export interface users {
   Name: string;
@@ -70,9 +72,25 @@ ngAfterViewInit() {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.Name+ 1}`;
   }
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
+
+
+
 
   ngOnInit(): void {
   }
+  // onselect(event:any){
+  //   if (event.target.file){
+  //     var reader= new FileReader();
+  //     reader.readAsDataURL(event.target.file[0]);
+  //     reader.onload=(event:any)=>{
+  //       this.img=event.target.result;
+  //     }
+
+  //   }
+  // }
+opendialog(){
+this.dialog.open(NewContactDialogComponent)
+}
 
 }

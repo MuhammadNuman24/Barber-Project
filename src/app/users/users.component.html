@@ -1,8 +1,12 @@
-<header>
-  <h1><mat-icon>account_circle_outlined</mat-icon>All users <button>ADD USER</button></h1>
-  </header>
-
+<mat-toolbar color="primary">
+  <h2>Admin User control page</h2>
+</mat-toolbar>
+  
+  <button mat-button color="primary" class="button" (click)="opendialog()">ADD USER</button>
+  <mat-card>
+  <mat-card-header> <mat-icon>supervisor_account</mat-icon>All Users</mat-card-header>
 <table mat-table color="primary" [dataSource]="dataSource">
+
     <ng-container matColumnDef="select">
       <th mat-header-cell *matHeaderCellDef>
         <mat-checkbox (change)="$event ? masterToggle() : null"
@@ -59,3 +63,4 @@
     [pageSizeOptions]="[2,5, 10]"
     aria-label="Select page">
 </mat-paginator>
+</mat-card>
