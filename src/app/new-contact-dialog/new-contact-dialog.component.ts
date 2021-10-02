@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-new-contact-dialog',
   templateUrl: './new-contact-dialog.component.html',
   styleUrls: ['./new-contact-dialog.component.css']
 })
 export class NewContactDialogComponent implements OnInit {
-  constructor( ) { }
+  constructor( private matdialogrf:MatDialogRef<NewContactDialogComponent>) { }
   img: '../../assets/face.png' = "../../assets/face.png";
  ngOnInit(): void {
   }
@@ -21,13 +20,13 @@ export class NewContactDialogComponent implements OnInit {
 
     }
   }
-  
+
 save(){  
 
 }
  
 cancel(){
-
+this.matdialogrf.close(NewContactDialogComponent)
   }
   
 }

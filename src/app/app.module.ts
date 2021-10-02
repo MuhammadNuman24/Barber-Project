@@ -49,13 +49,15 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { UsersComponent } from './users/users.component';
 import { NewContactDialogComponent } from './new-contact-dialog/new-contact-dialog.component';
+import { OpendialogComponent } from './opendialog/opendialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    NewContactDialogComponent
+    NewContactDialogComponent,
+    OpendialogComponent
   ],
   imports: [
     BrowserModule,
