@@ -73,22 +73,14 @@ ngAfterViewInit() {
   }
 
   constructor(public dialog:MatDialog) { }
-
-
-
-
   ngOnInit(): void {
+   
   }
-  // onselect(event:any){
-  //   if (event.target.file){
-  //     var reader= new FileReader();
-  //     reader.readAsDataURL(event.target.file[0]);
-  //     reader.onload=(event:any)=>{
-  //       this.img=event.target.result;
-  //     }
 
-  //   }
-  // }
+
+
+
+ 
 opendialog(){
 this.dialog.open(NewContactDialogComponent)
 }
